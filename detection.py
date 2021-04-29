@@ -12,9 +12,18 @@ def main():
     print("---------------------detection--------------------------")
 
     molecule = mol.Molecule("naphtalene.xyz")
-    molecule.scatter(molecule.neighbor)
     print()
     print(molecule.neighbor)
+    print()
+    print("liste carbon voisin hydrogène : ", molecule.neighborHydrogen)
+    print()
+    print("cList : ", molecule.cList)
+    print()
+    print("hList : ", molecule.hList)
+    print()
+    print("liste carbones voisin hydrogène : ", molecule.neighborHydrogen)
+    molecule.scatter(molecule.neighbor)
+   
     print("---------------------fin detection--------------------------")
 
 if __name__=="__main__":
@@ -27,6 +36,8 @@ if __name__=="__main__":
 # Je comprends que les boucles sur i et j cherchent qui est voisin de qui mais les autres, je ne sais pas.
 # À mon avis il faut d'abord faire la liste des voisins, puis la traiter au lieu de vouloir tout faire en même temps.
 # Mon algo serait
+
+
 # faire la liste des premiers voisins                           # RL : j'ai essayé de faire cela pour  l'instant 
 # faire une boucle sur tous les atomes:
 #   si un atome a 2 voisins qui portent chacun un hydrogène, alors c'est un site que je recherche
