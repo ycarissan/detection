@@ -13,16 +13,18 @@ def main():
 
     molecule = mol.Molecule("naphtalene.xyz")
     print()
-    print(molecule.neighbor)
-    print()
-    print("liste carbon voisin hydrogène : ", molecule.neighborHydrogen)
-    print()
-    print("cList : ", molecule.cList)
-    print()
-    print("hList : ", molecule.hList)
-    print()
-    print("liste carbones voisin hydrogène : ", molecule.neighborHydrogen)
-    molecule.scatter(molecule.neighbor)
+    for el in molecule.zigzag:
+        el[0].print()
+#    print(molecule.neighbour)
+#    print()
+#    print("liste carbon voisin hydrogène : ", molecule.neighborHydrogen)
+#    print()
+#    print("cList : ", molecule.cList)
+#    print()
+#    print("hList : ", molecule.hList)
+#    print()
+#    print("liste carbones voisin hydrogène : ", molecule.neighborHydrogen)
+#    molecule.scatter(molecule.neighbor)
    
     print("---------------------fin detection--------------------------")
 
